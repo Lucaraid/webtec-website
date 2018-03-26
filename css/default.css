@@ -1,0 +1,60 @@
+:root {
+    --switch-w: 50px;
+    --switch-h: 20px;
+    --switch-off-bg: #ddd;
+    --switch-on-bg: #04dead;
+    --switch-off-handle-color: #aaa;
+    --switch-on-handle-color: #0e9577;
+    --switch-handle-scale: 1.5;
+    --switch-off-handle-x: -50%;
+    --switch-on-handle-x: calc(var(--switch-w) + var(--switch-off-handle-x));
+    --switch-transition-duration: .2s;
+}
+
+body {
+    background: #fff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+input#toggle {
+    display: none;
+}
+input#toggle + label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: var(--switch-h);
+    width: var(--switch-w);
+    border-radius: calc(var(--switch-h) / 2);
+    background: var(--switch-off-bg);
+    -webkit-transition: var(--switch-transition-duration);
+    transition: var(--switch-transition-duration);
+}
+input#toggle + label span {
+    background: var(--switch-off-handle-color);
+    border-radius: 50%;
+    height: var(--switch-h);
+    width: var(--switch-h);
+    -webkit-transform: translateX(var(--switch-off-handle-x)) scale(var(--switch-handle-scale));
+    transform: translateX(var(--switch-off-handle-x)) scale(var(--switch-handle-scale));
+    -webkit-transition: var(--switch-transition-duration);
+    transition: var(--switch-transition-duration);
+    cursor: pointer;
+}
+input#toggle:checked + label {
+    background: var(--switch-on-bg);
+}
+input#toggle:checked + label span {
+    background: var(--switch-on-handle-color);
+    -webkit-transform: translateX(var(--switch-on-handle-x)) scale(var(--switch-handle-scale));
+    transform: translateX(var(--switch-on-handle-x)) scale(var(--switch-handle-scale));
+}
