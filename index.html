@@ -16,16 +16,18 @@
 
     <!-- CSS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link rel="stylesheet" href="css/default.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/skeleton.css">
     <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/default.css">
 
     <!-- JS
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="js/functions.js"></script>
+    <script src="js/skeleton.js"></script>
     <script src="js/jquery.cookie.js"></script>
+    <script src="js/canvas.js"></script>
+    <script src="js/functions.js"></script>
 
     <!-- Favicon
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -44,11 +46,10 @@
         <div class="container">
             <ul class="navbar-list">
                 <li class="navbar-item"><a class="navbar-link" href="#styleswitcher">Styleswitcher</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#code">Canvas</a></li>
+                <li class="navbar-item"><a class="navbar-link" href="#canvas_hslu">Canvas</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#form">Kontaktformular</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#diashow">Diashow</a></li>
                 <li class="navbar-item"><a class="navbar-link" href="#pictures">Bilder</a></li>
-                <li class="navbar-item"><a class="navbar-link" href="#diashow">Diashow</a></li>
             </ul>
         </div>
     </nav>
@@ -65,6 +66,15 @@
                 <label for="toggle">
                     <span></span>
                 </label>
+            </div>
+        </div>
+    </div>
+    <div class="docs-section" id="canvas_hslu">
+        <div class="row">
+            <h4>Canvas</h4>
+            <div class="one-half column">
+                <canvas id="canvas">
+                </canvas>
             </div>
         </div>
     </div>
