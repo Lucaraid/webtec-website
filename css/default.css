@@ -51,3 +51,7 @@ input#toggle:checked + label span {
     display: block;
     border: 1px solid #222;
 }
+
+.picture {
+    width: 100%;
+}

@@ -30,7 +30,7 @@
 
     <script src="js/skeleton.js"></script>
     <script src="js/jquery.cookie.js"></script>
-    <script src="js/canvas.js"></script>
+    <script src="js/ajax.js"></script>
     <script src="js/functions.js"></script>
 
     <?php
@@ -145,6 +145,12 @@
                 <textarea class="u-full-width" id="text" name="text" placeholder="Hello, ..."></textarea>
                 <input class="button-primary" name="submit" type="submit" value="Submit">
             </form>
+        </div>
+    </div>
+    <div class="docs-section" id="ajax">
+        <div class="row">
+            <h4>Switch Button with Picture</h4>
+            <button onclick="changeButton()">Click me</button>
         </div>
     </div>
 </div>
